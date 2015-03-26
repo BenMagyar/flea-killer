@@ -1,0 +1,34 @@
+{
+  "name": "flea-killer",
+  "version": "0.0.1",
+  "description": "Fleaflicker Baseball API",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/BenMagyar/flea-killer.git"
+  },
+  "keywords": [
+    "fleaflicker",
+    "flea",
+    "flicker",
+    "api",
+    "fantasy",
+    "baseball"
+  ],
+  "author": "Ben Magyar <magyar@american.edu>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BenMagyar/flea-killer/issues"
+  },
+  "homepage": "https://github.com/BenMagyar/flea-killer",
+  "devDependencies": {
+    "chai": "^2.1.2"
+  },
+  "dependencies": {
+    "cheerio": "^0.19.0",
+    "request": "^2.54.0"
+  }
+}
