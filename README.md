@@ -59,3 +59,47 @@ flea.league.get(13157, function(err, league){
   }, ... ]
 }
 ```
+
+### draft.get(identifier, function(err, draft))
+
+```identifier``` is a league ID or the URL to a draft. Returns all draft picks,
+pick numbers and basic player information.
+
+##### Example
+
+```
+flea.draft.get(13157, function(err, draft){
+  if (err) { return console.log('Handle Errors', err); }
+  // See below for returned draft object
+  console.log(draft);
+});
+```
+
+##### Returned
+
+```
+{
+  league: {
+    id: number,
+    name: string
+  },
+  // array of picks from the draft
+  picks: [{
+    round: number,
+    pick: {
+      // Overall draft number
+      overall: number,
+      // Round specific draft number
+      round: number
+    },
+    team: {
+      id: number,
+      name: string
+    },
+    player: {
+      id: number,
+      name: string
+    }
+  }, ...]
+}
+```
