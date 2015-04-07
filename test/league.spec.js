@@ -46,6 +46,9 @@ describe('League scraping', function(){
       expect(league.slots.total).to.equal(14);
       // Cant test avail/taken as those slots change and I dont want to mock it
       expect(league.id).to.equal(15317);
+      // Cant test individual stats that well
+      // expect(league.teams[0].stats.HR.points).to.equal(14);
+      // expect(league.teams[0].stats.HR.value).to.equal(4);
       done();
     });
 
