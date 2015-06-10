@@ -11,9 +11,9 @@ var flea = require('flea-killer');
 
 ### league.get(leagueType, leagueId, function(err, league))
 
-```leagueType``` is the Fleaflicker league ('nhl', 'mlb', etc.).
+```leagueType``` is the Fleaflicker league ('nhl', 'mlb', etc.).  
 ```leagueId``` is the Fleaflicker league ID. Returns
-all information availabile for the league from a single request.
+all information availabile for the league from a single request.  
 ```season``` is the year. Can be given null;
 
 ##### Example
@@ -63,10 +63,10 @@ flea.league.get('mlb', 13157, 2014, function(err, league){
 ```
 ### team.get(leagueType, leagueId, teamId, season, function(err, team))
 
-```leagueType``` is the Fleaflicker league ('nhl', 'mlb', etc.).
-```leagueId``` is the Fleaflicker league ID.
+```leagueType``` is the Fleaflicker league ('nhl', 'mlb', etc.).  
+```leagueId``` is the Fleaflicker league ID.  
 ```teamId``` is the Fleaflicker league ID. Returns
-all information availabile for the team from a single request.
+all information availabile for the team from a single request.  
 ```season``` is the year. Can be given null;
 
 
@@ -75,8 +75,8 @@ all information availabile for the team from a single request.
 ```
 flea.team.get('nhl', 1800, 10370, null, function(err, team){
   if (err) { return console.log('Handle Errors', err); }
-  // See below for returned draft object
-  console.log(draft);
+  // See below for returned team object
+  console.log(team);
 });
 ```
 
@@ -98,9 +98,9 @@ flea.team.get('nhl', 1800, 10370, null, function(err, team){
 
 ### draft.get(leagueType, leagueId, season, function(err, draft))
 
-```leagueType``` is the Fleaflicker league ('nhl', 'mlb', etc.).
+```leagueType``` is the Fleaflicker league ('nhl', 'mlb', etc.).  
 ```leagueId``` is the Fleaflicker league ID. Returns
-all information availabile for the league from a single request.
+all information availabile for the league from a single request.  
 ```season``` is the year. Can be given null;
 
 ##### Example
