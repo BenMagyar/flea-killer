@@ -24,9 +24,6 @@
     "url": "https://github.com/BenMagyar/flea-killer/issues"
   },
   "homepage": "https://github.com/BenMagyar/flea-killer",
-  "devDependencies": {
-    "chai": "^2.1.2"
-  },
   "dependencies": {
     "cheerio": "^0.19.0",
     "request": "^2.54.0"
