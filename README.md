@@ -1,6 +1,6 @@
 # flea-killer
 
-Fleaflicker baseball API through web scraping, since no official API exists.
+Fleaflicker API through web scraping, since no official API exists.
 
 ## API
 
@@ -9,15 +9,17 @@ For all examples:
 var flea = require('flea-killer');
 ```
 
-### league.get(identifier, function(err, league))
+### league.get(leagueType, leagueId, function(err, league))
 
-```identifier``` is the Fleaflicker league ID or the URL for the league. Returns
+```leagueType``` is the Fleaflicker league ('nhl', 'mlb', etc.).
+```leagueId``` is the Fleaflicker league ID. Returns
 all information availabile for the league from a single request.
+```season``` is the year.
 
 ##### Example
 
 ```
-flea.league.get(13157, function(err, league){
+flea.league.get('mlb', 13157, 2014, function(err, league){
   if (err) { return console.log('Handle Errors', err); }
   // See below for returned league object
   console.log(league);
@@ -59,16 +61,52 @@ flea.league.get(13157, function(err, league){
   }, ... ]
 }
 ```
+### team.get(leagueType, leagueId, teamId, season, function(err, team))
 
-### draft.get(identifier, function(err, draft))
+```leagueType``` is the Fleaflicker league ('nhl', 'mlb', etc.).
+```leagueId``` is the Fleaflicker league ID.
+```teamId``` is the Fleaflicker league ID. Returns
+all information availabile for the team from a single request.
+```season``` is the year.
 
-```identifier``` is a league ID or the URL to a draft. Returns all draft picks,
-pick numbers and basic player information.
 
 ##### Example
 
 ```
-flea.draft.get(13157, function(err, draft){
+flea.team.get('nhl', 1800, 10370, 2014, function(err, team){
+  if (err) { return console.log('Handle Errors', err); }
+  // See below for returned draft object
+  console.log(draft);
+});
+```
+
+##### Returned
+
+```
+{
+  id: number,
+  name: string,
+  owner: string,
+  points: number,
+  players: [{
+    name: string,
+    totalPoints: number,
+    avgPoints: number
+  }, ...]
+}
+```
+
+### draft.get(leagueType, leagueId, season, function(err, draft))
+
+```leagueType``` is the Fleaflicker league ('nhl', 'mlb', etc.).
+```leagueId``` is the Fleaflicker league ID. Returns
+all information availabile for the league from a single request.
+```season``` is the year.
+
+##### Example
+
+```
+flea.draft.get('mlb', 13157, 2014, function(err, draft){
   if (err) { return console.log('Handle Errors', err); }
   // See below for returned draft object
   console.log(draft);
