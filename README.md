@@ -9,7 +9,7 @@ For all examples:
 var flea = require('flea-killer');
 ```
 
-### league.get(leagueType, leagueId, function(err, league))
+### league.get(leagueType, leagueId, season, function(err, league))
 
 ```leagueType``` is the Fleaflicker league ('nhl', 'mlb', etc.).
 ```leagueId``` is the Fleaflicker league ID. Returns
