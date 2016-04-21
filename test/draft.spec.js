@@ -4,8 +4,8 @@ var expect = require('chai').expect,
 describe('Draft scraping', function(){
 
   it('should allow for a URL of a league', function(done){
-    draft.get('http://www.fleaflicker.com/mlb/leagues/15313/draft?season=2014', function(err, draft){
-      expect(draft.league.name).to.equal('SOS AL East 2015');
+    draft.get('http://www.fleaflicker.com/mlb/leagues/17040/drafts?season=2014', function(err, draft){
+      expect(draft.league.name).to.equal('SOS D3 C');
       done();
     });
   });
