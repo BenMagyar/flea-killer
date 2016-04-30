@@ -1,6 +1,6 @@
 {
   "name": "flea-killer",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Fleaflicker Baseball API",
   "main": "index.js",
   "scripts": {

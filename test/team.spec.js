@@ -59,4 +59,11 @@ describe('Team scraping', function(){
     });
   });
 
+  it('should allow for longer team Ids', function(done){
+    team.get('http://www.fleaflicker.com/mlb/leagues/17021/teams/100393?season=2016', function(err, team){
+      expect(team.name).to.equal('2009 All Stars');
+      done();
+    });
+  });
+
 });

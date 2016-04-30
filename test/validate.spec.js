@@ -29,6 +29,7 @@ describe('Link and parameter validation', function(){
 
   it('should correctly verify season years', function(){
     var nextYear = new Date().getFullYear() + 1;
+    expect(validate.season(nextYear - 1)).to.equal(true);
     expect(validate.season(nextYear)).to.equal(false);
     expect(validate.season(2014)).to.equal(true);
   });
