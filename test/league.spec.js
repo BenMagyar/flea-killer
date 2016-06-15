@@ -53,16 +53,16 @@ describe('League scraping', function(){
   });
 
   it('should grab the correct league information', function(done){
-    league.get('http://www.fleaflicker.com/mlb/leagues/15317?season=2014', function(err, league){
-      expect(league.name).to.equal('SOS NL East 2015');
-      expect(league.commish).to.equal('NextLvlFantasy');
+    league.get('http://www.fleaflicker.com/mlb/leagues/17027?season=2016', function(err, league){
+      expect(league.name).to.equal('Reddit-2016-10');
+      expect(league.commish).to.equal('NextLevelFntsy');
       expect(league.type).to.equal('Roto');
-      expect(league.slots.total).to.equal(14);
+      expect(league.slots.total).to.equal(12);
       // Cant test avail/taken as those slots change and I dont want to mock it
-      expect(league.id).to.equal(15317);
+      expect(league.id).to.equal(17027);
       // Cant test individual stats that well
-      // expect(league.teams[0].stats.HR.points).to.equal(14);
-      // expect(league.teams[0].stats.HR.value).to.equal(4);
+      // expect(league.teams[0].stats.HR.points).to.equal(10);
+      // expect(league.teams[0].stats.HR.value).to.equal(99);
       done();
     });
 
