@@ -146,7 +146,7 @@ flea.draft.get('mlb', 13157, 2014, function(err, draft){
 
 ```leagueType``` is the Fleaflicker league ('nhl', 'mlb', etc.).
 ```leagueId``` is the Fleaflicker league ID.
-```teamId``` is the Fleaflicker league ID. Returns all information availabile for the team from a single request.
+```teamId``` is the Fleaflicker team ID. Returns all information availabile for the team from a single request.
 ```season``` is the year.
 
 
