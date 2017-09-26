@@ -176,3 +176,45 @@ flea.schedule.get('nhl', 1800, 10370, 2014, function(err, schedule){
   }, ...]
 }
 ```
+
+### scores.get(leagueType, leagueId, gameId, season, function(err, scores))
+
+```leagueType``` is the Fleaflicker league ('nhl', 'mlb', etc.).
+```leagueId``` is the Fleaflicker league ID.
+```gameId``` is the Fleaflicker game ID. Returns all information availabile for the game from a single request.
+```season``` is the year.
+
+
+##### Example
+
+```
+flea.scores.get('nfl', 200993, 37447178, 2017, function(err, schedule){
+  if (err) { return console.log('Handle Errors', err); }
+  // See below for returned draft object
+  console.log(scores);
+});
+```
+
+##### Returned
+
+```
+{
+  id: number,
+  home_name: string,  
+  away_name: string,
+  home_scores: [{
+    player: string,
+    score: number,
+    position: string
+    }, ...],
+  away_scores: [{
+    player: string,
+    score: number,
+    position: string
+    }, ...]
+  home_total: number,
+  away_total: number,
+  home_optimum: number,
+  away_optimum: number,
+}
+```
