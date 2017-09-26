@@ -76,7 +76,7 @@ all information availabile for the team from a single request.
 flea.team.get('nhl', 1800, 10370, 2014, function(err, team){
   if (err) { return console.log('Handle Errors', err); }
   // See below for returned draft object
-  console.log(draft);
+  console.log(team);
 });
 ```
 
@@ -138,6 +138,41 @@ flea.draft.get('mlb', 13157, 2014, function(err, draft){
       id: number,
       name: string
     }
+  }, ...]
+}
+```
+
+### schedule.get(leagueType, leagueId, teamId, season, function(err, schedule))
+
+```leagueType``` is the Fleaflicker league ('nhl', 'mlb', etc.).
+```leagueId``` is the Fleaflicker league ID.
+```teamId``` is the Fleaflicker league ID. Returns all information availabile for the team from a single request.
+```season``` is the year.
+
+
+##### Example
+
+```
+flea.schedule.get('nhl', 1800, 10370, 2014, function(err, schedule){
+  if (err) { return console.log('Handle Errors', err); }
+  // See below for returned draft object
+  console.log(schedule);
+});
+```
+
+##### Returned
+
+```
+{
+  id: number,
+  name: string,
+  wins: number,
+  losses: number,
+  games: [{
+    id: number,
+    week: number,
+    opponent: string,
+    score: string
   }, ...]
 }
 ```
