@@ -1,15 +1,72 @@
 {
-  "name": "flea-killer",
-  "version": "0.1.5",
+  "_args": [
+    [
+      {
+        "raw": "flea-killer",
+        "scope": null,
+        "escapedName": "flea-killer",
+        "name": "flea-killer",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "C:\\node\\fleascrape"
+    ]
+  ],
+  "_from": "flea-killer@latest",
+  "_id": "flea-killer@0.1.7",
+  "_inCache": true,
+  "_location": "/flea-killer",
+  "_nodeVersion": "7.4.0",
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/flea-killer-0.1.7.tgz_1490835269899_0.4676156365312636"
+  },
+  "_npmUser": {
+    "name": "bmagyar",
+    "email": "magyar@american.edu"
+  },
+  "_npmVersion": "4.0.5",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "flea-killer",
+    "scope": null,
+    "escapedName": "flea-killer",
+    "name": "flea-killer",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/flea-killer/-/flea-killer-0.1.7.tgz",
+  "_shasum": "c754a958ff12481d71f52227277d0874abf68f66",
+  "_shrinkwrap": null,
+  "_spec": "flea-killer",
+  "_where": "C:\\node\\fleascrape",
+  "author": {
+    "name": "Ben Magyar",
+    "email": "magyar@american.edu"
+  },
+  "bugs": {
+    "url": "https://github.com/BenMagyar/flea-killer/issues"
+  },
+  "dependencies": {
+    "cheerio": "^0.19.0",
+    "request": "^2.54.0"
+  },
   "description": "Fleaflicker Baseball API",
-  "main": "index.js",
-  "scripts": {
-    "test": "mocha"
+  "devDependencies": {
+    "chai": "^2.1.2"
   },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/BenMagyar/flea-killer.git"
+  "directories": {},
+  "dist": {
+    "shasum": "c754a958ff12481d71f52227277d0874abf68f66",
+    "tarball": "https://registry.npmjs.org/flea-killer/-/flea-killer-0.1.7.tgz"
   },
+  "gitHead": "d1ddcf4ac93627e6355d2ab8fdd282fadf6fd840",
+  "homepage": "https://github.com/BenMagyar/flea-killer",
   "keywords": [
     "fleaflicker",
     "flea",
@@ -18,17 +75,23 @@
     "fantasy",
     "baseball"
   ],
-  "author": "Ben Magyar <magyar@american.edu>",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/BenMagyar/flea-killer/issues"
+  "main": "index.js",
+  "maintainers": [
+    {
+      "name": "bmagyar",
+      "email": "magyar@american.edu"
+    }
+  ],
+  "name": "flea-killer",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/BenMagyar/flea-killer.git"
   },
-  "homepage": "https://github.com/BenMagyar/flea-killer",
-  "devDependencies": {
-    "chai": "^2.1.2"
+  "scripts": {
+    "test": "mocha"
   },
-  "dependencies": {
-    "cheerio": "^0.19.0",
-    "request": "^2.54.0"
-  }
+  "version": "0.1.7"
 }
